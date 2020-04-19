@@ -6,7 +6,7 @@ $color-black:							#363636
 
 html
   margin: 0
-  padding: 0  
+  padding: 0 
 
 *
 	font-size: 10px
@@ -15,18 +15,31 @@ html
 	font-family: "Montserrat Regular"
 =MSB()
 	font-family: "Montserrat SemiBold"
+=RB()
+  font-family: "Roboto"
 p
   +MR()
   font-size: 1.4rem
+  color: $color-black
+  line-height: 170%
+  letter-spacing: 0.6px
 
 h2 
-  +MSB()
+  +RB()
   font-size: 3.6rem
-  padding-bottom: 70px
-  padding-top: 40px
+  color: $color-black
 h3 
   +MSB()
   font-size: 1.6em
+  color: $color-black
+h4 
+  +MSB()
+  font-size: 1.4em
+  color: $color-black
+h5 
+  +MR()
+  font-size: 1.6em
+  color: $color-black
 
 .permalink
   margin-top: 30px
@@ -35,6 +48,7 @@ h3
     font-size: 1.8rem
     color: $color-black
     text-decoration: none
+
 
 
 .header-menu.active 
@@ -68,10 +82,28 @@ header
 .header
   height: 400px
   padding-bottom: 20px
+  &-catalog
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/catalog-bg.jpg) 50% 20%
+    height: 700px
+    background-size: cover
   &-mainpage
     background: linear-gradient(359.55deg, #FFFFFF 0.67%, rgba(255, 255, 255, 0.463542) 10.43%, rgba(255, 255, 255, 0) 99.36%), linear-gradient(0deg, rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.58)), url('../img/main.jpg') 50% 10%
     height: 900px
     background-size: cover
+  &-news 
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/news.jpg) 50% 20%
+    height: 680px
+    background-size: cover
+  &-pak 
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/pak-bg.jpg) 50% 20%
+    height: 680px
+    background-size: cover
+  &-contact
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/contact.jpg) 50% 20%
+    height: 680px
+    background-size: cover
+  &-low 
+    height: 100px
   &-burger
     display: block
     position: relative
@@ -148,6 +180,8 @@ header
     padding-top: 200px
     color: $color-black
     text-align: center
+    &-white 
+      color: $color-white
     &-mainpage
       padding-top: 340px
       text-align: left
@@ -163,15 +197,22 @@ header
       margin-top: 30px
       font-size: 1.2rem
       +MR()
-      
+  &-light-title
+    color: $color-white
+    padding-top: 250px
+    h1 
+      width: 100%
+      text-align: center
 .about
   margin-top: -200px
   max-height: 700px
   h2 
     padding-top: 0
+    padding-bottom: 30px
   .wrapper
     padding: 60px
     max-width: 1300px
+    width: 100%
     margin: 0 auto
     background-color: $color-white
     border-radius: 50px
@@ -197,6 +238,8 @@ header
     width: 100%
 .new-news
   min-height: 550px
+  h2 
+    padding-bottom: 30px  
   &-block
     display: flex
     flex-direction: row
@@ -229,6 +272,8 @@ header
   padding: 80px 0px
   margin: 80px 0 80px 0
   color: $color-white
+  h2 
+    color: $color-white
   &-block
     display: flex
     flex-direction: row
@@ -236,11 +281,14 @@ header
     margin-top: 80px 
   &-item
     text-align: center
+    p 
+      color: $color-white
     img 
       border-radius: 50%
       margin-bottom: 40px
     h3 
       margin-bottom: 20px
+      color: $color-white
 .recomendation
   min-height: 700px
   &-block
@@ -314,74 +362,344 @@ header
       display: flex
       flex-direction: column
       justify-content: center
+      h3 
+        color: $color-white
       p
         +MR()
         font-size: 1.4rem
+        color: $color-white
 
 
 // Catalog css
 .catalog 
-  margin: 10px 0
+  margin-top: -200px
+  .wrapper 
+    padding: 60px
+    max-width: 1300px
+    width: 100%
+    margin: 0 auto
+    border-radius: 50px
+    background-color: $color-white
   &-block
     display: flex
     flex-direction: row
     justify-content: space-around
     flex-wrap: wrap
-  article
-    margin-bottom: 30px
-  &-item
-    position: relative
-    display: flex
-    justify-content: space-between
-    flex-direction: column
-    max-width: 400px
-    height: 490px 
+  &-item 
+    max-width: 300px
+    min-width: 270px
     width: 100%
-    border-radius: 2px
-    transition: all 0.2s ease-out 
+    height: 400px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $color-white
+    padding: 10px
+    box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.1)
+    margin: 20px 10px
+    border-radius: 3px
+    transition: all 0.3s ease-out 0.1s
     &:hover
-      box-shadow: 0 0 38px 0 rgba(41,44,58,.15)
-      transition: all 0.1s ease-out
-      .catalog-item__text
-        transition: all 0.2s ease-out 
-        background: rgba(0, 0, 0, 0.55)
-        z-index: 2
-        border-radius: 2px
-    &__img
-      display: flex
-      justify-content: center
-      align-items: center
-      img 
-        width: 400px
-        height: auto
-    &__title 
-      width: 100%
-      height: 100px
-      text-align: center
-      display: flex
-      align-items: center
-      justify-content: center
-      a 
-        +MSB()
-        font-size: 1.6rem
-        color: $color-black
+      box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.2)
+      transition: all 0.3s ease-out 0.1s
+    a 
+      +MSB()
+      font-size: 1.6em
+      color: $color-black
+      &:hover
         text-decoration: none
-        transition: all 0.2s ease-out 
-        &:hover
-          color: $color-item
-          transition: all 0.2s ease-out 
-    &__text 
-      display: flex
-      position: absolute
-      width: 100%
-      height: 400px
-      z-index: -1
+        color: $color-item
+      img 
+        width: 100%
+        height: 300px
+
+    span 
+      font-size: 1.6rem
+      +MR()
+      
+    
+
+        
+// Стили для catalog-index 
+
+.product
+  min-height: 800px
+  &-item  
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+    width: 100%
+    margin-top: 50px
+    &__img 
+      width: 50%
+      display: flex 
+      justify-content: center
+      padding: 0 15px
+      img 
+        width: 100%
+        max-width: 460px
+        height: 100%
+    &__info
+      width: 50%
+      h2 
+        margin: 0
+        padding: 0
+    &__count
+      h3
+        margin-top: 10px 
+        +MR()
+        font-size: 2.4rem
+    &__content 
       p 
-        padding: 20px
-        color: $color-white
+        margin-top: 70px
         +MR()
         font-size: 1.4rem
+    &__const 
+      margin-top: 50px
+    &__btn, .su-lightbox
+      margin-top: 30px
+      width: 150px
+      height: 35px
+      background-color: $color-item
+      border-radius: 5px
+      text-align: center
+      color: $color-white
+      +MR()
+      font-size: 1.4rem
+  &-commentary
+    margin: 0 auto
+    width: 100%
+
+// Стили для news.html
+.news
+  min-height: 700px
+  margin-top: -200px
+  .wrapper
+    padding: 60px
+    max-width: 1300px
+    width: 100%
+    margin: 0 auto
+    background-color: $color-white
+    border-radius: 50px
+  &-block
+    display: flex
+    flex-direction: row
+  &-blog 
+    width: 70%
+  &-item
+    display: flex
+    flex-direction: row
+    margin-bottom: 50px
+    h3
+      a 
+        font-size: 2.6rem
+        color: $color-black
+        text-decoration: none
+        &:hover
+          text-decoration: none
+          color: $color-item
+
+    &__img 
+      width: 30%
+      padding-right: 20px
+      img 
+        max-width: 250px
+        max-height: 200px
+        height: 100%
+        float: right
+    &__info
+      width: 70%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &__category
+      color: $color-item
+      font-size: 1.4rem 
+      p 
+        +MSB()
+    &__title 
+      margin-top: -10px
+      font-size: 1.8rem
+      margin-bottom: 20px
+      h3 
+        +RB()
+    &__footer
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+.sidebar 
+  padding-left: 10px
+  width: 30%
+
+
+// Стили для конткретного новостного поста
+
+.post 
+  min-height: 600px
+  &-item
+    display: flex
+    flex-direction: column
+    padding: 0 20px
+    &__img 
+      width: 100%
+      height: auto
+      text-align: center
+      max-height: 100%
+      img 
+        width: 100%
+        max-width: 1100px
+        height: auto
+    &__category
+      display: flex 
+      justify-content: space-between
+      flex-direction: row
+      margin-top: 10px
+      font-size: 1.4rem
+      p 
+        +RB()
+    &__title
+      h2
+        +RB()
+        font-size: 3.6rem
+        padding: 20px 0 40px 0
+    &__content 
+      color: $color-black
+      font-size: 1.4rem
+      +MR()
+      line-height: 180%
+      letter-spacing: 0.8px
+      margin-bottom: 20px
+  &-commentary
+    margin: 0 auto
         
+// Стили для блока с документами
+
+.document 
+  &-slider
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    margin: 0px 0 80px 0
+    img 
+      width: 100%
+      max-width: 700px
+      height: 100%
+
+// Стили для блока услуг
+  
+.header-services
+  background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/services-bg.jpg) 50% 20%
+  height: 680px
+  background-size: cover
+.services 
+  min-height: 600px
+  margin-top: -200px
+  .wrapper 
+    padding: 60px
+    max-width: 1300px
+    width: 100%
+    margin: 0 auto
+    background-color: $color-white
+    border-radius: 50px
+  &-block
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+  &-title 
+    margin: 100px 0 30px
+  &-item 
+    width: 49%
+    min-width: 270px
+    height: auto
+    border: 1px solid $color-black
+    margin: 0 0 20px 0 
+    +MSB()
+    font-size: 1.4rem
+    padding: 10px
+    color: $color-black
+    border-radius: 10px
+    box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.1)
+    &:hover
+      text-decoration: none
+      background-color: $color-item
+      color: $color-white
+      border: 1px solid $color-item
+      box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.2)
+
+// Стили для программно-аппаратного комплекса
+
+.pak 
+  margin-top: -200px
+  .wrapper 
+    padding: 60px
+    max-width: 1300px
+    width: 100%
+    margin: 0 auto
+    background-color: $color-white
+    border-radius: 50px
+  &-block 
+    margin-top: 50px
+    display: flex 
+    flex-direction: column
+    justify-content: start
+  &-item 
+    width: 100%
+    min-width: 270px
+    height: auto
+    border: 1px solid $color-black
+    margin: 0 0 20px 0 
+    +MSB()
+    font-size: 1.4rem
+    padding: 10px
+    color: $color-black
+    border-radius: 10px
+    box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.1)
+    &:hover
+      text-decoration: none
+      background-color: $color-item
+      color: $color-white
+      border: 1px solid $color-item
+      box-shadow: 10px 15px 30px 0px rgba(16,29,48,0.2)
+
+
+// Стили для блока с контактами
+
+.contact
+  margin-top: -200px
+  .wrapper 
+    padding: 60px
+    max-width: 1300px
+    width: 100%
+    margin: 0 auto
+    background-color: $color-white
+    border-radius: 50px
+  &-title 
+    margin-bottom: 30px 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -413,7 +731,45 @@ header
       a 
         color: $color-white
         font-size: 1.6rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 992px)
+  .catalog 
+    .wrapper
+      margin: 0 5px
+  .catalog 
+    .wrapper
+      margin: 0 5px
+  .catalog 
+    .wrapper
+      margin: 0 5px
+  .catalog 
+    .wrapper
+      margin: 0 5px
+  .catalog 
+    .wrapper
+      margin: 0 5px
+  .news 
+    .wrapper
+      padding: 55px 15px  
+  .new-news 
+    h2
+      margin-top: 50px  
   .new-news-block
     align-items: center
     flex-direction: column
@@ -427,6 +783,7 @@ header
   .information-block
     flex-direction: column
     align-items: center
+    margin: 30px 0
   .information-item 
     justify-content: end 
     &_text 
@@ -434,8 +791,29 @@ header
   .advantages-item
     p, h3
       width: 150px
-    
-    
+  .product-item
+    flex-direction: column
+    align-items: center
+    &__img 
+      width: 100%
+      display: flex
+      justify-content: center
+      img 
+        width: 100%
+        max-width: 460px
+    &__info 
+      width: 100%
+      padding: 20px 15px 
+
+  .news-blog
+    width: 100%
+  .news-item__footer
+    flex-direction: column
+  .news-block 
+    flex-direction: column
+  .sidebar
+    margin: 50px auto 0px auto
+    width: 100%
 @media (max-width: 769px)
   .header-nav-title
     display: none
@@ -457,6 +835,28 @@ header
   .recomendation
     h2 
       margin: 0 0 10px 0
+  .news-item
+    min-height: 400px
+    flex-direction: column
+    &__img 
+      min-width: 270px 
+      width: 100%
+      text-align: center
+      padding-right: 0
+      img
+        float: none
+        max-height: 400px
+        width: 100%
+    &__info 
+      width: 100%
+    &__category
+      margin-top: 20px
+      margin-bottom: 10px
+  .services-block
+    flex-direction: column
+    align-items: center
+  .services-item
+    width: 100%
 @media (max-width: 624px)
   h2 
     font-size: 2.8rem
@@ -468,10 +868,15 @@ header
     max-height: 300px
   .header-mainpage
     max-height: 650px
+  .header-news
+    max-height: 650px
   .about-content 
     flex-wrap: wrap
     img 
       margin-top: 10px
+  .about 
+    .wrapper 
+      padding: 40px 10px 0 8px
   .footer-nav 
     flex-direction: column
     align-items: center
@@ -484,6 +889,24 @@ header
       font-size: 3.4rem
       span 
         font-size: 3.4rem
+  .advantages
+    padding: 50px 0px
+    margin: 50px 0 50px 0
+    color: $color-white
+    &-item 
+      img 
+        width: 100px
+        margin-bottom: 20px
+      p 
+        font-size: 1.4rem
+    &-block
+      margin-top: 30px 
+  .recomendation-item
+    justify-content: center
+  .recomendation-permalink
+    margin-top: 10px
+  .catalog
+    margin-top: -2px
 @media (max-width: 356px)
   .new-news
     margin-top: 80px

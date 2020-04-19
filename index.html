@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
 						<nav class="header-menu" id="menu">
 							<ul id="nav" class="nav align-middle">
 								<li>
-									<a href="#about">
+									<a href="index.html">
 										Главная
 									</a>
 								</li>
@@ -37,27 +38,27 @@
 									</a>
 								</li>
 								<li >
-									<a href="#delivery">
+									<a href="news.html">
 										Новости
 									</a>
 								</li>
 								<li>
-									<a href="#map">
+									<a href="document.html">
 										Документы
 									</a>
 								</li>
 								<li>
-									<a href="#brand">
+									<a href="services.html">
 										Услуги
 									</a>
                 </li>
                 <li>
-									<a href="#brand">
+									<a href="pak.html">
 										ПАК
 									</a>
                 </li>
                 <li>
-									<a href="#brand">
+									<a href="contact.html">
 										Контакты
 									</a>
 								</li>
@@ -78,8 +79,8 @@
 		</header>
 		<div class="container">
 			<div class="header-title header-title-mainpage">
-				<h1>Сеть кабинетов <br> <span>здоровья</span></h1>	
-				<p>Г. СЕВЕРОМОРСК</p>
+				<h1 data-aos="fade-right" >Сеть кабинетов <br><span >здоровья</span></h1>	
+				<p data-aos="fade-right" data-aos-duration="600" data-aos-offset="450">Г. СЕВЕРОМОСРК</p>
 			</div>
 		</div>
 	</div>
@@ -96,7 +97,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="about-content">
-							<div class="about-text">
+							<div class="about-text" data-aos="fade-up">
 								<p>РС "Сеть кабинетов здоровья" - это инновационная компания, которая внедряет на рынок уникальные продукты с использованием нанотехнологий, отвечающие всем международным стандартам качества.</p>
 								<br><p>Российская компания "Сеть кабинетов здоровья" создаётся и функционирует при поддержке Общероссийской общественной организации "Лига здоровья нации".</p>
 							</div>
@@ -118,7 +119,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="new-news-block">
+					<div class="new-news-block" data-aos="fade-up">
 						<article>
 							<div class="new-news-item">
 								<div class="news-image">
@@ -181,7 +182,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="advantages-block">
+					<div class="advantages-block" data-aos="fade-up">
 						<div class="advantages-item">
 							<img src="img/curcle.jpg" alt="Circle">
 							<h3>Преимущество</h3>
@@ -216,7 +217,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="recomendation-block">
+					<div class="recomendation-block" data-aos="fade-up">
 						<article>
 							<div class="recomendation-item">
 								<div class="recomendation-image">
@@ -273,29 +274,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="information-block">
-						<div class="information-item">
+					<div class="information-block" data-aos="fade-up">
+						<div class="information-item" data-aos="fade-up"> 
 							<i class="fas fa-map-marker-alt"></i>
 							<div class="information-item_text">
 								<h3>Адрес</h3>
 								<p>г. Североморск, <br>ул. Пикуля, д. 12</p>
 							</div>
 						</div>
-						<div class="information-item">
+						<div class="information-item" data-aos="fade-up">
 							<i class="fas fa-clock"></i>
 							<div class="information-item_text">
 								<h3>Часы работы</h3>
 								<p>Пон - Пт, 8:00 - 18:00</p>
 							</div>
 						</div>
-						<div class="information-item">
+						<div class="information-item" data-aos="fade-up">
 							<i class="fas fa-phone"></i>
 							<div class="information-item_text">
 								<h3>Наш телефон</h3>
 								<p>+7 (927) 837 73-73</p>
 							</div>
 						</div>
-						<div class="information-item">
+						<div class="information-item" data-aos="fade-up">
 							<i class="fas fa-envelope"></i>
 							<div class="information-item_text">
 								<h3>Почта</h3>
@@ -335,6 +336,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="js/script.js"></script>
   <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>

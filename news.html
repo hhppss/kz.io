@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="header header-catalog">
+	<div class="header header-news">
 		<header class="header__color">
 			<div class="container">
 				<div class="row">
@@ -77,53 +78,70 @@
 			</div>
 		</header>
 		<div class="container">
-			<div class="header-title header-title-white">
-				<h1>Каталог <span>товаров</span></h1>	
+			<div class="header-title header-light-title" data-aos="fade-up">
+				<h1>Новости</h1>	
 			</div>
 		</div>
 	</div>
-	<section class="catalog">
+	<section class="news">
 		<div class="wrapper">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="catalog-block">
-							<div class="catalog-item">
-								<a href=""><img src="img/product.jpg" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
+					<div class="news-block">
+						<div class="news-blog">
+							<div class="news-item">
+								<div class="news-item__img">
+									<img src="img/news-posthumb.jpg" alt="">
+								</div>
+								<div class="news-item__info">
+									<div class="news-item__category">
+										<p>Здоровье</p>
+									</div>
+									<div class="news-item__title">
+										<h3><a href="news-post.html">Привет мир! Пример заголовка сайта привет привет привет</a></h3>
+									</div>
+									<div class="news-item__excerpt">
+										<p>Краткое описание новости  Краткое описание новости Краткое описание новости Краткое описание новости Краткое описание новости</p>
+									</div>
+									<div class="news-item__footer">
+										<h4>Автор поста: {}</h4>
+										<h4>Дата публикации: {}</h4>
+									</div>
+								</div>
 							</div>
-							<div class="catalog-item">
-								<a href=""><img src="img/catalog-item.png" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
-							</div>
-							<div class="catalog-item">
-								<a href=""><img src="img/catalog-item.png" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
-							</div>
-							<div class="catalog-item">
-								<a href=""><img src="img/catalog-item.png" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
-							</div>
-							<div class="catalog-item">
-								<a href=""><img src="img/catalog-item.png" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
-							</div>
-							<div class="catalog-item">
-								<a href=""><img src="img/catalog-item.png" alt=""></a>
-								<a href="">Название товара</a>
-								<span>2410 Р</span>
+							<div class="news-item">
+								<div class="news-item__img">
+									<img src="img/news-posthumb.jpg" alt="">
+								</div>
+								<div class="news-item__info">
+									<div class="news-item__category">
+										<p>Здоровье</p>
+									</div>
+									<div class="news-item__title">
+										<h3>Привет мир! Пример заголовка сайта привет привет привет</h3>
+									</div>
+									<div class="news-item__excerpt">
+										<p>Краткое описание новости& Краткое описание новости Краткое описание новости Краткое описание новости Краткое описание новости</p>
+									</div>
+									<div class="news-item__footer">
+										<h4>Автор поста: {}</h4>
+										<h4>Дата публикации: {}</h4>
+									</div>
+								</div>
 							</div>
 						</div>
+						<aside class="sidebar">
+								<div class="sidebar-text">
+									<h3>Текст</h3> 
+									<p>С другой стороны выбранный нами инновационный путь способствует подготовке и реализации соответствующих условий активизации.</p>
+								</div>
+						</aside>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
@@ -152,6 +170,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="js/script.js"></script>
   <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>

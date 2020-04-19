@@ -6,6 +6,10 @@
   font-family: 'Montserrat Regular';
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"); }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Bold.woff2) format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"); }
+
 html {
   margin: 0;
   padding: 0; }
@@ -16,17 +20,30 @@ html {
 
 p {
   font-family: "Montserrat Regular";
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #363636;
+  line-height: 170%;
+  letter-spacing: 0.6px; }
 
 h2 {
-  font-family: "Montserrat SemiBold";
+  font-family: "Roboto";
   font-size: 3.6rem;
-  padding-bottom: 70px;
-  padding-top: 40px; }
+  color: #363636; }
 
 h3 {
   font-family: "Montserrat SemiBold";
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  color: #363636; }
+
+h4 {
+  font-family: "Montserrat SemiBold";
+  font-size: 1.4em;
+  color: #363636; }
+
+h5 {
+  font-family: "Montserrat Regular";
+  font-size: 1.6em;
+  color: #363636; }
 
 .permalink {
   margin-top: 30px; }
@@ -67,10 +84,28 @@ header {
 .header {
   height: 400px;
   padding-bottom: 20px; }
+  .header-catalog {
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/catalog-bg.jpg) 50% 20%;
+    height: 700px;
+    background-size: cover; }
   .header-mainpage {
     background: linear-gradient(359.55deg, #FFFFFF 0.67%, rgba(255, 255, 255, 0.463542) 10.43%, rgba(255, 255, 255, 0) 99.36%), linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.58)), url("../img/main.jpg") 50% 10%;
     height: 900px;
     background-size: cover; }
+  .header-news {
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/news.jpg) 50% 20%;
+    height: 680px;
+    background-size: cover; }
+  .header-pak {
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/pak-bg.jpg) 50% 20%;
+    height: 680px;
+    background-size: cover; }
+  .header-contact {
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/contact.jpg) 50% 20%;
+    height: 680px;
+    background-size: cover; }
+  .header-low {
+    height: 100px; }
   .header-burger {
     display: block;
     position: relative;
@@ -146,6 +181,8 @@ header {
     padding-top: 200px;
     color: #363636;
     text-align: center; }
+    .header-title-white {
+      color: #ffffff; }
     .header-title-mainpage {
       padding-top: 340px;
       text-align: left; }
@@ -161,15 +198,23 @@ header {
       margin-top: 30px;
       font-size: 1.2rem;
       font-family: "Montserrat Regular"; }
+  .header-light-title {
+    color: #ffffff;
+    padding-top: 250px; }
+    .header-light-title h1 {
+      width: 100%;
+      text-align: center; }
 
 .about {
   margin-top: -200px;
   max-height: 700px; }
   .about h2 {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 30px; }
   .about .wrapper {
     padding: 60px;
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 50px; }
@@ -196,6 +241,8 @@ header {
 
 .new-news {
   min-height: 550px; }
+  .new-news h2 {
+    padding-bottom: 30px; }
   .new-news-block {
     display: flex;
     flex-direction: row;
@@ -229,6 +276,8 @@ header {
   padding: 80px 0px;
   margin: 80px 0 80px 0;
   color: #ffffff; }
+  .advantages h2 {
+    color: #ffffff; }
   .advantages-block {
     display: flex;
     flex-direction: row;
@@ -236,11 +285,14 @@ header {
     margin-top: 80px; }
   .advantages-item {
     text-align: center; }
+    .advantages-item p {
+      color: #ffffff; }
     .advantages-item img {
       border-radius: 50%;
       margin-bottom: 40px; }
     .advantages-item h3 {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      color: #ffffff; }
 
 .recomendation {
   min-height: 700px; }
@@ -317,71 +369,297 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      .information-item_text h3 {
+        color: #ffffff; }
       .information-item_text p {
         font-family: "Montserrat Regular";
-        font-size: 1.4rem; }
+        font-size: 1.4rem;
+        color: #ffffff; }
 
 .catalog {
-  margin: 10px 0; }
+  margin-top: -200px; }
+  .catalog .wrapper {
+    padding: 60px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: #ffffff; }
   .catalog-block {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap; }
-  .catalog article {
-    margin-bottom: 30px; }
   .catalog-item {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    max-width: 400px;
-    height: 490px;
+    max-width: 300px;
+    min-width: 270px;
     width: 100%;
-    border-radius: 2px;
-    transition: all 0.2s ease-out; }
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.1);
+    margin: 20px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-out 0.1s; }
     .catalog-item:hover {
-      box-shadow: 0 0 38px 0 rgba(41, 44, 58, 0.15);
-      transition: all 0.1s ease-out; }
-      .catalog-item:hover .catalog-item__text {
-        transition: all 0.2s ease-out;
-        background: rgba(0, 0, 0, 0.55);
-        z-index: 2;
-        border-radius: 2px; }
-    .catalog-item__img {
+      box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.2);
+      transition: all 0.3s ease-out 0.1s; }
+    .catalog-item a {
+      font-family: "Montserrat SemiBold";
+      font-size: 1.6em;
+      color: #363636; }
+      .catalog-item a:hover {
+        text-decoration: none;
+        color: #2A4CFF; }
+      .catalog-item a img {
+        width: 100%;
+        height: 300px; }
+    .catalog-item span {
+      font-size: 1.6rem;
+      font-family: "Montserrat Regular"; }
+
+.product {
+  min-height: 800px; }
+  .product-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px; }
+    .product-item__img {
+      width: 50%;
       display: flex;
       justify-content: center;
-      align-items: center; }
-      .catalog-item__img img {
-        width: 400px;
-        height: auto; }
-    .catalog-item__title {
-      width: 100%;
-      height: 100px;
+      padding: 0 15px; }
+      .product-item__img img {
+        width: 100%;
+        max-width: 460px;
+        height: 100%; }
+    .product-item__info {
+      width: 50%; }
+      .product-item__info h2 {
+        margin: 0;
+        padding: 0; }
+    .product-item__count h3 {
+      margin-top: 10px;
+      font-family: "Montserrat Regular";
+      font-size: 2.4rem; }
+    .product-item__content p {
+      margin-top: 70px;
+      font-family: "Montserrat Regular";
+      font-size: 1.4rem; }
+    .product-item__const {
+      margin-top: 50px; }
+    .product-item__btn, .product-item .su-lightbox {
+      margin-top: 30px;
+      width: 150px;
+      height: 35px;
+      background-color: #2A4CFF;
+      border-radius: 5px;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .catalog-item__title a {
-        font-family: "Montserrat SemiBold";
-        font-size: 1.6rem;
-        color: #363636;
+      color: #ffffff;
+      font-family: "Montserrat Regular";
+      font-size: 1.4rem; }
+  .product-commentary {
+    margin: 0 auto;
+    width: 100%; }
+
+.news {
+  min-height: 700px;
+  margin-top: -200px; }
+  .news .wrapper {
+    padding: 60px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 50px; }
+  .news-block {
+    display: flex;
+    flex-direction: row; }
+  .news-blog {
+    width: 70%; }
+  .news-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px; }
+    .news-item h3 a {
+      font-size: 2.6rem;
+      color: #363636;
+      text-decoration: none; }
+      .news-item h3 a:hover {
         text-decoration: none;
-        transition: all 0.2s ease-out; }
-        .catalog-item__title a:hover {
-          color: #2A4CFF;
-          transition: all 0.2s ease-out; }
-    .catalog-item__text {
+        color: #2A4CFF; }
+    .news-item__img {
+      width: 30%;
+      padding-right: 20px; }
+      .news-item__img img {
+        max-width: 250px;
+        max-height: 200px;
+        height: 100%;
+        float: right; }
+    .news-item__info {
+      width: 70%;
       display: flex;
-      position: absolute;
+      flex-direction: column;
+      justify-content: space-between; }
+    .news-item__category {
+      color: #2A4CFF;
+      font-size: 1.4rem; }
+      .news-item__category p {
+        font-family: "Montserrat SemiBold"; }
+    .news-item__title {
+      margin-top: -10px;
+      font-size: 1.8rem;
+      margin-bottom: 20px; }
+      .news-item__title h3 {
+        font-family: "Roboto"; }
+    .news-item__footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+
+.sidebar {
+  padding-left: 10px;
+  width: 30%; }
+
+.post {
+  min-height: 600px; }
+  .post-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px; }
+    .post-item__img {
       width: 100%;
-      height: 400px;
-      z-index: -1; }
-      .catalog-item__text p {
-        padding: 20px;
-        color: #ffffff;
-        font-family: "Montserrat Regular";
-        font-size: 1.4rem; }
+      height: auto;
+      text-align: center;
+      max-height: 100%; }
+      .post-item__img img {
+        width: 100%;
+        max-width: 1100px;
+        height: auto; }
+    .post-item__category {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-top: 10px;
+      font-size: 1.4rem; }
+      .post-item__category p {
+        font-family: "Roboto"; }
+    .post-item__title h2 {
+      font-family: "Roboto";
+      font-size: 3.6rem;
+      padding: 20px 0 40px 0; }
+    .post-item__content {
+      color: #363636;
+      font-size: 1.4rem;
+      font-family: "Montserrat Regular";
+      line-height: 180%;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px; }
+  .post-commentary {
+    margin: 0 auto; }
+
+.document-slider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0px 0 80px 0; }
+  .document-slider img {
+    width: 100%;
+    max-width: 700px;
+    height: 100%; }
+
+.header-services {
+  background: linear-gradient(360deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%), url(../img/services-bg.jpg) 50% 20%;
+  height: 680px;
+  background-size: cover; }
+
+.services {
+  min-height: 600px;
+  margin-top: -200px; }
+  .services .wrapper {
+    padding: 60px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 50px; }
+  .services-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .services-title {
+    margin: 100px 0 30px; }
+  .services-item {
+    width: 49%;
+    min-width: 270px;
+    height: auto;
+    border: 1px solid #363636;
+    margin: 0 0 20px 0;
+    font-family: "Montserrat SemiBold";
+    font-size: 1.4rem;
+    padding: 10px;
+    color: #363636;
+    border-radius: 10px;
+    box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.1); }
+    .services-item:hover {
+      text-decoration: none;
+      background-color: #2A4CFF;
+      color: #ffffff;
+      border: 1px solid #2A4CFF;
+      box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.2); }
+
+.pak {
+  margin-top: -200px; }
+  .pak .wrapper {
+    padding: 60px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 50px; }
+  .pak-block {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; }
+  .pak-item {
+    width: 100%;
+    min-width: 270px;
+    height: auto;
+    border: 1px solid #363636;
+    margin: 0 0 20px 0;
+    font-family: "Montserrat SemiBold";
+    font-size: 1.4rem;
+    padding: 10px;
+    color: #363636;
+    border-radius: 10px;
+    box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.1); }
+    .pak-item:hover {
+      text-decoration: none;
+      background-color: #2A4CFF;
+      color: #ffffff;
+      border: 1px solid #2A4CFF;
+      box-shadow: 10px 15px 30px 0px rgba(16, 29, 48, 0.2); }
+
+.contact {
+  margin-top: -200px; }
+  .contact .wrapper {
+    padding: 60px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 50px; }
+  .contact-title {
+    margin-bottom: 30px; }
 
 .footer {
   background-color: #363636;
@@ -412,6 +690,20 @@ header {
         font-size: 1.6rem; }
 
 @media (max-width: 992px) {
+  .catalog .wrapper {
+    margin: 0 5px; }
+  .catalog .wrapper {
+    margin: 0 5px; }
+  .catalog .wrapper {
+    margin: 0 5px; }
+  .catalog .wrapper {
+    margin: 0 5px; }
+  .catalog .wrapper {
+    margin: 0 5px; }
+  .news .wrapper {
+    padding: 55px 15px; }
+  .new-news h2 {
+    margin-top: 50px; }
   .new-news-block {
     align-items: center;
     flex-direction: column; }
@@ -424,13 +716,36 @@ header {
     margin-bottom: 50px; }
   .information-block {
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin: 30px 0; }
   .information-item {
     justify-content: end; }
     .information-item_text {
       margin-left: 20px; }
   .advantages-item p, .advantages-item h3 {
-    width: 150px; } }
+    width: 150px; }
+  .product-item {
+    flex-direction: column;
+    align-items: center; }
+    .product-item__img {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      .product-item__img img {
+        width: 100%;
+        max-width: 460px; }
+    .product-item__info {
+      width: 100%;
+      padding: 20px 15px; }
+  .news-blog {
+    width: 100%; }
+  .news-item__footer {
+    flex-direction: column; }
+  .news-block {
+    flex-direction: column; }
+  .sidebar {
+    margin: 50px auto 0px auto;
+    width: 100%; } }
 
 @media (max-width: 769px) {
   .header-nav-title {
@@ -450,7 +765,29 @@ header {
     .advantages-item p {
       min-width: 260px; }
   .recomendation h2 {
-    margin: 0 0 10px 0; } }
+    margin: 0 0 10px 0; }
+  .news-item {
+    min-height: 400px;
+    flex-direction: column; }
+    .news-item__img {
+      min-width: 270px;
+      width: 100%;
+      text-align: center;
+      padding-right: 0; }
+      .news-item__img img {
+        float: none;
+        max-height: 400px;
+        width: 100%; }
+    .news-item__info {
+      width: 100%; }
+    .news-item__category {
+      margin-top: 20px;
+      margin-bottom: 10px; }
+  .services-block {
+    flex-direction: column;
+    align-items: center; }
+  .services-item {
+    width: 100%; } }
 
 @media (max-width: 624px) {
   h2 {
@@ -463,10 +800,14 @@ header {
     max-height: 300px; }
   .header-mainpage {
     max-height: 650px; }
+  .header-news {
+    max-height: 650px; }
   .about-content {
     flex-wrap: wrap; }
     .about-content img {
       margin-top: 10px; }
+  .about .wrapper {
+    padding: 40px 10px 0 8px; }
   .footer-nav {
     flex-direction: column;
     align-items: center;
@@ -478,7 +819,24 @@ header {
   .header-title h1 {
     font-size: 3.4rem; }
     .header-title h1 span {
-      font-size: 3.4rem; } }
+      font-size: 3.4rem; }
+  .advantages {
+    padding: 50px 0px;
+    margin: 50px 0 50px 0;
+    color: #ffffff; }
+    .advantages-item img {
+      width: 100px;
+      margin-bottom: 20px; }
+    .advantages-item p {
+      font-size: 1.4rem; }
+    .advantages-block {
+      margin-top: 30px; }
+  .recomendation-item {
+    justify-content: center; }
+  .recomendation-permalink {
+    margin-top: 10px; }
+  .catalog {
+    margin-top: -2px; } }
 
 @media (max-width: 356px) {
   .new-news {
